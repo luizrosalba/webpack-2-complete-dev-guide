@@ -144,3 +144,10 @@ const total = sum (10,5);
 
 console.log(total);
 ```
+
+# Style and css loaders 
+
+1) created image_viewer.js
+2) Imported from index.js 
+3) now image_viewer will be on bundle.js
+

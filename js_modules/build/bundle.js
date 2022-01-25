@@ -63,11 +63,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports) {
+
+const image = document.createElement('img');
+image.src = 'http://lorempixel.com.br/400/400';
+document.body.appendChild(image);
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
 const sum = (a, b) => a + b;
@@ -75,14 +83,19 @@ const sum = (a, b) => a + b;
 module.exports = sum; /// CommonJs
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sum__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sum__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sum___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sum__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_viewer__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__image_viewer__);
  /// ES2015
+
+ /// do not exports just runs just import the code must be imported once 
+/// or will not be present on bundle
 
 const total = __WEBPACK_IMPORTED_MODULE_0__sum___default()(10, 5);
 console.log(total);
