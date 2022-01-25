@@ -23,7 +23,9 @@ const config = {
             },
             ///css rule to load css 
             {
-                use: ["style-loader", "css-loader"],
+                loader: ExtractTextPlugin.extract({
+                    loader: 'css-loader'
+                }),
                 test: /\.css$/
             },
             {

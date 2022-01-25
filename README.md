@@ -60,10 +60,9 @@ npm install --save-dev webpack@2.2.0-rc.0
 
 Não consigo fazer os loaders funcionarem neste projeto. Como a versão do webpack é muito antiga todas as combinações me parecem quebradas no build :( 
 
-npm install --save-dev babel-core@6.17.0 babel-loader@6.2.0 babel-preset-env@1.1.4 babel-preset-react@6.16.0 css-loader@0.26.1 style-loader@0.13.1
+To use css-loader, webpack@5 is required
 
-npm install --save-dev @babel/core babel-loader @babel/preset-env css-loader style-loader
-npm install --save-dev file-loader
+npm install --save-dev @babel/core @babel/preset-env babel-loader
 
 npm remove babel-core babel-loader babel-preset-env babel-preset-react css-loader style-loader
 
