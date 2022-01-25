@@ -1,4 +1,4 @@
-const sum = require('./sum') /// CommonJs
+import sum from './sum' /// ES2015
 
 const total = sum (10,5);
 

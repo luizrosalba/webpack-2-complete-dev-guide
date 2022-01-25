@@ -136,3 +136,11 @@ Its easy to refactor from commonJs to Es2015
 1) change require fpr import 
 
 2) module.export to export 
+
+```
+import sum from './sum' /// ES2015
+
+const total = sum (10,5);
+
+console.log(total);
+```
