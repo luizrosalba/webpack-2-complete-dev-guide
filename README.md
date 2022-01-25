@@ -56,6 +56,17 @@ import, export
 
 npm install --save-dev webpack@2.2.0-rc.0
 
+## install loaders and plugins 
+
+Não consigo fazer os loaders funcionarem neste projeto. Como a versão do webpack é muito antiga todas as combinações me parecem quebradas no build :( 
+
+npm install --save-dev babel-core@6.17.0 babel-loader@6.2.0 babel-preset-env@1.1.4 babel-preset-react@6.16.0 css-loader@0.26.1 style-loader@0.13.1
+
+npm install --save-dev @babel/core babel-loader @babel/preset-env css-loader style-loader
+npm install --save-dev file-loader
+
+npm remove babel-core babel-loader babel-preset-env babel-preset-react css-loader style-loader
+
 - always better to use local than global install 
 
 ## configure 
@@ -163,5 +174,10 @@ npm install --save-dev css-loader style-loader
 
 npm install --save-dev extract-text-webpack-plugin@2.0.0-beta.4
 
+## Loader for webpack to process images 
 
+- image-webpack-loader compress image
+- url-loader if image is small include in bundle as raw, if its big include raw image in output directory
+
+npm install --save-dev image-webpack-loader url-loader
 

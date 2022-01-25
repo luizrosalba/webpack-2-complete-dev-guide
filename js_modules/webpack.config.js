@@ -23,11 +23,27 @@ const config = {
             },
             ///css rule to load css 
             {
-                use: ['style-loader', 'css-loader'], //rigth to left  1st css-loader then style-loader
+                use: ["style-loader", "css-loader"],
                 test: /\.css$/
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',  /// second
+                        options: { limit : 40000 } 
+                        /// config so that larger than 40000bits gets included as raw 
+                    },
+                    'image-webpack-loader' // first
+                ]
+                ///config loader
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('styles.css') 
+        //any files cougth by loader are treated and combined into styles.css
+    ]
 };
 
 module.exports = config;
