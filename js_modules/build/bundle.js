@@ -70,21 +70,19 @@
 /* 0 */
 /***/ function(module, exports) {
 
-const sum = (a,b) => a + b; 
+const sum = (a, b) => a + b;
 
-module.exports = sum;  /// CommonJs
+module.exports = sum; /// CommonJs
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-const sum = __webpack_require__(0) /// CommonJs
+const sum = __webpack_require__(0); /// CommonJs
 
-const total = sum (10,5);
 
+const total = sum(10, 5);
 console.log(total);
-
-
 
 /***/ }
 /******/ ]);

@@ -100,7 +100,39 @@ Babel : Turns ES2015/6/7 code in ES5 Code
 2) babel-core: Knows how to take in code, parse, generate output files  
 3) babel-preset-env: Ruleset for telling babel what pieces of ES2015/6/7 syntax to look for and how to turn into ES5
 
+npm install --save-dev babel-loader babel-core babel-preset-env
+npm install --save-dev  babel-loader @babel/core @babel/preset-env
+
+## Babel Setup
 
 
+```
+module: {
+    /// configuring rules for babel
+    rules: [
+        {
+            /// which loader to use
+            use: 'babel-loader',
+            /// test needs regular expressions.
+            test: /\.js$/  // only use babel in js files 
+        }
+    ]
+}
+```
 
+create .babelrc to tell what to run 
 
+```
+{
+    "presets": ["babel-preset-env"]
+}
+```
+babel  transform arrow function (ES2015) to a function ES5 in bundle
+
+## Refactor to Es2015
+
+Its easy to refactor from commonJs to Es2015
+
+1) change require fpr import 
+
+2) module.export to export 
