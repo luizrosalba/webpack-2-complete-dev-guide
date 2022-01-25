@@ -145,9 +145,23 @@ const total = sum (10,5);
 console.log(total);
 ```
 
-# Style and css loaders 
+## Style and css loaders 
 
 1) created image_viewer.js
 2) Imported from index.js 
 3) now image_viewer will be on bundle.js
+4) adding js_modules\src\image_viewer.js
+5) importing on js_modules\src\image_viewer.js
+6) need css-loader and style-loader 
+
+npm install --save-dev css-loader style-loader 
+
+- takes css manually and injects in html 
+- loading css in a separated file is faster than loading injected in html file 
+
+## Separated css  
+
+npm install --save-dev extract-text-webpack-plugin@2.0.0-beta.4
+
+
 

@@ -1,4 +1,5 @@
 const path = require('path'); /// nodejs package
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = { 
     /// relative to root dir
@@ -13,11 +14,17 @@ const config = {
     module: {
         /// configuring rules for babel
         rules: [
+            ///babel rule to load js
             {
                 /// which loader to use
                 use: 'babel-loader',
                 /// test needs regular expressions.
                 test: /\.js$/  // only use babel in js files 
+            },
+            ///css rule to load css 
+            {
+                use: ['style-loader', 'css-loader'], //rigth to left  1st css-loader then style-loader
+                test: /\.css$/
             }
         ]
     }

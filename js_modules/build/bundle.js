@@ -63,12 +63,17 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_image_viewer_css__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_image_viewer_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_image_viewer_css__);
+ /// non js must have extension
 
 const image = document.createElement('img');
 image.src = 'http://lorempixel.com.br/400/400';
@@ -84,6 +89,12 @@ module.exports = sum; /// CommonJs
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+throw new Error("Module build failed: TypeError: this.getOptions is not a function\n    at Object.loader (C:\\Users\\SouzLuiz\\code\\webpack-2-complete-dev-guide\\js_modules\\node_modules\\style-loader\\dist\\index.js:19:24)");
+
+/***/ },
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91,7 +102,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sum__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sum___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sum__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_viewer__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__image_viewer__);
  /// ES2015
 
  /// do not exports just runs just import the code must be imported once 
