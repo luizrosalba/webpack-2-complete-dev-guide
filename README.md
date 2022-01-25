@@ -56,6 +56,8 @@ import, export
 
 npm install --save-dev webpack@2.2.0-rc.0
 
+- always better to use local than global install 
+
 ## configure 
 
 webpack.config.js (required)
@@ -66,8 +68,37 @@ webpack.config.js (required)
 - in our project index.js
 
 
+## Runnning webpack 
+
+Adding build scripts to package.json
+
+npm run build 
+
+## what is inside bundle
+
+bundle is larger than the sum of two js files 
 
 
+comments and my functions 
+
+points to entrypoint index in function array 
+
+## Running app in browser 
+
+- created index.html 
+- added script to load bundle
+
+## Handling Assets 
+
+- Loaders 
+
+Babel : Turns ES2015/6/7 code in ES5 Code 
+
+3 modules to make babel work : 
+
+1) babel-loader : babel how to work with webpack
+2) babel-core: Knows how to take in code, parse, generate output files  
+3) babel-preset-env: Ruleset for telling babel what pieces of ES2015/6/7 syntax to look for and how to turn into ES5
 
 
 
