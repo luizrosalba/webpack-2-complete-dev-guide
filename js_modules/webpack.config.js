@@ -9,7 +9,8 @@ const config = {
         path: path.resolve(__dirname, 'build'), 
         /// absolute file reference using path module
         /// path.resolve makes path valid for any OS windows, mac, linux...
-        filename: 'bundle.js' // any name is valid
+        filename: 'bundle.js', // any name is valid
+        publicPath: 'build/'
     },
     module: {
         /// configuring rules for babel
@@ -32,9 +33,10 @@ const config = {
                 test: /\.(jpe?g|png|gif|svg)$/,
                 use: [
                     {
-                        loader: 'url-loader',  /// second
-                        options: { limit : 40000 } 
+                        loader: 'url-loader'  /// second
+                        // options: { limit : 40000 } 
                         /// config so that larger than 40000bits gets included as raw 
+                        /// broken in this url-loader version
                     },
                     'image-webpack-loader' // first
                 ]
